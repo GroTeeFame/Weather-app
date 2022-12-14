@@ -1,0 +1,144 @@
+@import '../../style/variables.scss';
+@import '../../style/breakpoints.scss';
+
+.currentWeather-window {
+    height: 100%;
+    margin: 0 auto;
+    margin-right: 20px;
+    border-radius: 15px;
+    box-shadow: $boxShadow;
+
+    @include xs {
+        width: 100%;
+        margin: 0 auto;
+    }
+    @include sm {
+        width: 100%;
+        margin: 0 auto;
+    }
+    @include md {
+        width: 80%;
+        margin: 0 auto;
+    }
+    @include lg {
+        width: 400px;
+        height: 100%;
+        margin: 0 auto;
+        margin-right: 20px;
+    }
+    @include xl {
+        width: 400px;
+        height: 100%;
+        margin: 0 auto;
+        margin-right: 20px;
+    }
+
+    .currentWeather-wrapper {
+        height: 100%;
+        margin: auto;
+        text-align: center;
+        background: $gradient;
+        border-radius: 15px;
+
+        .currentWeather-title{
+            display: block;
+            padding: 5px 20px;
+            text-align: start;
+            border-radius: 15px 15px 0 0;
+        }
+        .currentWeather-header {
+            display: flex;
+            align-items: center;
+
+            .currentWeather-location {
+                font-size: 22px;
+                @include xs {
+                    width: 90%;
+                }
+                @include sm {
+                    width: 90%;
+                }
+                @include md {
+                    width: 90%;
+                }
+                @include lg {
+                    width: 300px;
+                }
+                @include xl {
+                    width: 300px;
+                }
+            }
+        }
+        .currentWeather-icon-wrapper {
+            max-width: 75px;
+            max-height: 75px;
+            width: auto;
+            height: auto;
+            margin: 10px 10px;
+        }
+        .currentWeather-temp{
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            text-align: start;
+            padding: 5px 20px;
+            margin: 0 10px;
+            font-size: 18px;
+            border-radius: 15px;
+        }
+        .horizontal{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            border-radius: 15px;
+            @include xs {
+                grid-template-columns: 1fr;
+            }
+            @include sm {
+                grid-template-columns: 1fr;
+            }
+            @include md {
+                grid-template-columns: 1fr 1fr;
+            }
+            @include lg {
+                grid-template-columns: 1fr 1fr;
+            }
+            @include xl {
+                grid-template-columns: 1fr 1fr;
+            }
+            .currentWeather {
+                display: grid;
+                grid-template-columns: 3fr 2fr;
+                text-align: start;
+                padding: 10px 5px;
+                font-size: 18px;
+                border-radius: 15px;
+                margin: 10px 5px;
+                @include xs {
+                    padding: 5px 5px;
+                    width: 60vw;
+                    margin: 0 auto;
+                }
+                @include sm {
+                    padding: 5px 5px;
+                    width: 60vw;
+                    margin: 0 auto;
+                }
+                @include md {
+                    padding: 10px 5px;
+                    width: 90%;
+                    margin: 0 auto;
+                }
+                @include lg {
+                    padding: 5px 5px;
+                    width: 95%;
+                    margin: 0 auto;
+                    font-size: 17px;
+                }
+                @include xl {
+                    padding: 5px 5px;
+                    width: 90%;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}

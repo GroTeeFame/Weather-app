@@ -1,0 +1,94 @@
+@import '../../style/variables.scss';
+@import '../../style/breakpoints.scss';
+
+.forecast-weather-wrapper{
+    background: $gradient;
+    border-radius: 15px;
+    width: 80vw;
+    margin: 0 auto;
+
+    border-radius: 15px;
+    box-shadow: $boxShadow;
+    .forecast-weather-title {
+        display: block;
+        padding: 5px 20px;
+        border-radius: 15px 15px 0 0;
+    }
+}
+.forecast-weather-table-wrapper {
+    background: $gradient;
+
+    padding: 10px 10px;
+    border-radius: 0 0 15px 15px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+    &::-webkit-scrollbar { 
+        display: none;  /* Safari and Chrome */
+    }
+    @include lg {
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+    @include xl {
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+}
+.forecast-weather-table{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 15px;
+    width: fit-content;
+    margin: 0 auto;
+}
+.forecast-weather-column{
+    margin: 0;
+    margin-left: 20px;
+    cursor: pointer;
+    background: $gradientAccent;
+    border-radius: 15px;
+
+    @include xs {
+        margin-left: 15px;
+        min-width: 70px;
+    }
+    @include sm {
+        margin-left: 15px;
+        min-width: 70px;
+    }
+    @include md {
+        margin-left: 15px;
+        min-width: 70px;
+    }
+    @include lg {
+        margin-left: 20px;
+        min-width: 11%;
+    }
+    @include xl {
+        margin-left: 20px;
+        min-width: 11%;
+    }
+}
+.forecast-weather-column-descr{
+    cursor: default;
+}
+.forecast-weather-column-item{
+    display: flex;
+    width: 100%;
+    min-height: 50px;
+    text-align: start;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5px;
+
+    .forecast-weather-icon-wrapper{
+        width: 32px;
+        height: 32px;
+    }
+}
+.forecast-weather-hourly{
+    height: 300px;
+    margin: 20px auto;
+}

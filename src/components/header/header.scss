@@ -1,0 +1,62 @@
+@import '../../style/variables.scss';
+@import '../../style/breakpoints.scss';
+
+.header-wrapper {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    height: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    background: $headerColor;
+    // background: $headerGradient;
+    box-shadow: $boxShadowHeader;
+
+    .header-title {
+        font-size: 22px;
+        margin: 0 25px;
+    }
+    .header-end {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        height: 40px;
+        .icon {
+            height: 30px;
+            width: 30px;
+            margin: 0 5px;
+        }   
+        .support {
+            margin: 0 10px;
+            height: 70%;
+            min-width: 80px;
+            border-radius: 5px;
+            background: $blueColor;
+            border: none;
+            color: black;
+        }     
+    }
+}
+.search-wrapper{
+    display: flex;
+    justify-content: center;
+    margin: 15px auto;
+}
+
+
+// @include xs {
+//     background: gray;
+// }
+// @include sm {
+//     background: red;
+// }
+// @include md {
+//     background: blue;
+// }
+// @include lg {
+//     background: white;
+// }
+// @include xl {
+//     background: pink;
+// }

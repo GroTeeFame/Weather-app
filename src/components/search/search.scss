@@ -1,0 +1,27 @@
+@import '../../style/variables.scss';
+@import '../../style/breakpoints.scss';
+
+.header-search-wrapper {
+    margin: 10px auto;
+    @include xs {
+        width: 80vw;
+    }
+    @include sm {
+        width: 80vw;
+    }
+    @include md {
+        width: 40vw;
+    }
+    @include lg {
+        width: 35vw;
+    }
+    @include xl {
+        width: 30vw;
+    }
+
+    .header-search {
+        border-radius: 8px 8px 8px 8px;
+        height: 100%;
+        width: 100%;
+    }
+}
